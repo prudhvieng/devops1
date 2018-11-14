@@ -1,0 +1,50 @@
+yum install java-1.8*
+
+set the path in .bash_profile
+ JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/
+ PATH=$PATH:$JAVA_HOME
+ 
+
+install wget
+sudo yum install wget
+
+install jenkins
+
+$ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat/jenkins.repo
+
+$ sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+           
+$ sudo yum install jenkins -y
+
+$ sudo service jenkins start
+
+copy the secret password 
+
+Install Maven
+
+Go to cd /opt create maven directory
+
+cd /opt
+   mkdir maven
+   cd /opt/maven
+ download the file using wget
+      wget http://mirrors.wuchna.com/apachemirror/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+ Unzip the file     
+tar -xvzf apache-maven-3.5.4-bin.tar.gz
+
+enter into the path
+     cd apache-maven-3.5.4
+Copy the path using pwd
+     pwd
+
+M2_HOME=/opt/maven/apache-mav  (PWD)
+M2=$M2_HOME/bin
+
+$M2_HOME:$M2
+
+echo $PATH (for path)
+
+     cd /root
+   vi .bash_profile
+
+            

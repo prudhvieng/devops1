@@ -1,0 +1,51 @@
+Install Jenkins 
+Install plugins
+Copy the initial password
+create users or skip now
+---skip now 
+    manage jenkins -> manage users -> change password
+Enable auto refresh
+ create a job
+ build it
+ check the console output
+PEOPLE: To find the no of users but can not change anything on it..
+BUILD HISTORY: To see all the jobs run by Jenkins
+CREDENTIALS: To add credentials of svn,git tomcat,etc.. by admin without sharing it to the users
+ Credentials -> System -> Global Credentials-> Add Credentials
+BUILD QUEUE:
+BUILD EXECUTOR STATUS:If there are 4 jobs to be run at the same time and the Build executor status has only two..2 jobs will be building the rest will be sent to Build Q
+                      We can manage the no of build executors
+
+
+
+MANAGE JENKINS:  Configure Systems
+
+                Home directory: The path of jenkins
+   		System Message: Message will be shown on the home page
+		No of executors: no of executors can be managed
+		LABELS:  Labels will be given to The Jenkins slave while configuring it. The Master Jenkins will decide the jobs to be run in any Jenkins Slave using labels
+		Quiet period: The time gap between the builds in the same job
+		SCM checkout retry count: Used with the poll scm.
+		Environment Varialbles: Define varialble. It can be used in entire jenkins
+
+
+
+		CONFIGURE GLOBAL SECURITY:
+		
+		Enable Security: Turn it on else using the ip anyone can login and perform the admin task
+		 ----Jenkins have the own user database---
+		-> Disable allow uers to signup
+
+
+		Authorization : enabling Any one can do anything is equal to diabling security..Never do it
+                                Logged in users can do anything
+				Anonymous read option
+				Matrix based Security: Be careful. Jenkins server will be locked If usersgroups to add is null. Give admin user name
+				Add users and give them the access
+                                PROJECT BASED AUTHORIZATION:similar to Matrix based but w.r.t Project
+  		CONFIGURE CREDENTIALS:
+		     Can configure the credentials
+		GLOBAL TOOL CONFIGURATION: 
+			ALL tools like Git,Docker,Maven etc..paths are given here.
+MANAGE USER: Create user modify user delete user
+		  

@@ -1,0 +1,33 @@
+git add .
+git commit -m "1st tym"
+git log 
+git log --oneline  (for one line commit)
+git log --oneline -* (dispalys the last * commits in one line)
+git reset --soft cmtid  (it brings back the file from local repository to index area)
+git status   (To check if the cmt id is in index area)
+git reset HEAD filename (to move files from index to workspace)
+git branch (To see the present working branch)
+git branch master1 (to create master1 branch)
+git branch  (displays you all the branches)
+git checkout master1  (switches to master1 from master branch)
+touch f1  (create in master1)
+git checkout master (switch to master)
+git merge master1 (all the commit id's can be seen and extra commit id id generated )
+git rebase master1 (extra commit id will not be generated)
+  
+GIT STASH: The file will be in stash when it is in Index/Staging area. It is temporary memory.
+ 
+
+git push url branchname (to push to the remote repository )
+git push origin -d branchname (to delete the branch remotely )
+git branch -D branchname  (to delete the branch locally)
+git commit -m "filename" a1 (to commit a particular file a1 )
+git tag name commitId  (to tag )
+git show name
+git push origin name (to send the name to remote)
+git push origin -d name (to delete the tag remotely)
+git tag -d name (to delete the tag locally)
+git fetch (downloads the diff)
+git branch -r
+git show origin/master
+git merge origin/master

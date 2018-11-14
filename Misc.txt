@@ -1,0 +1,7 @@
+To change the time zone
+
+ rm /etc/localtime
+
+ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+
+date

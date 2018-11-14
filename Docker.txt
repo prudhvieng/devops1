@@ -1,0 +1,121 @@
+Docker file: https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/
+
+What is Docker ?
+
+Docker is the world’s leading software container platform
+
+Docker makes the process of application deployment very easy and efficient and resolves a lot of issues related to deploying applications.Docker is a tool designed to make it easier to deploy and run applications by using containers
+
+Docker gives you a standard way of packaging your application with all its dependencies in a container.Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package. 
+
+Yum install docker
+
+docker --version
+
+sudo service docker start
+
+sudo usermod -a -G docker "user"  -Relogin to make the changes effective
+
+docker --help   *- eg: docker run --help
+
+docker login    *- to login to dockerhub
+
+docker images   *- shows the images
+
+docker images -q *- shows only the image id
+
+docker images --help
+
+docker pull   *-First searches locally and if not found pulls from dockerhub
+
+docker rmi <imageid>  *-to remove the image
+
+docker images -f "dangling=true" *-search google
+
+docker inspect imgid  *- gives the complete info of image. Image is a stack of layers.
+
+docker ps  *-shows the running containers
+
+docker ps -a *- shows all the containers
+
+docker run ubuntu *-pulls the image from dockerhub if it is not present locally
+
+docker run -it ubuntu ( -it is for the input and output)
+
+docker run --name MyUbuntu -it ubuntu *-gives the name to the container
+
+docker run --help
+
+docker start contid  (docker start -a contid  :  -a shows the o/p)
+
+docker stop contid  (stop vs kill)
+
+docker logs contid  (displays the logs of the container for both running and stopped)
+
+docker pause contID  *-to pause
+
+docker unpause contId *-to unpause
+
+docker top contId  *-shows the process
+
+docker stats contId *- stats of running container
+
+docker attach contId  *-to attach to the container
+
+docker kill contid  *-kills only running container
+
+docker rm contid  *-to remove the container
+
+docker stats  *-all the memory stats are available
+
+docker system df *-to check the disk usage
+
+docker system prune --help *-to remove unused data
+
+docker container create  *- creates the container in stopped state
+
+docker system prune 
+
+ 	-WARNING! This will remove:
+        - all stopped containers
+        - all networks not used by at least one container
+        - all dangling images
+        - all build cache
+
+-------------------------------------------------------------------DOCKERFILE---------------------------------------------------------------------------------------------
+
+Docker file: https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/
+
+A text file with instructions to build image
+
+create a file named Dockerfile
+
+create a folder and file Dockerfile.
+
+edit the Dockerfile
+
+FROM : for base image ..scratch-> empty image
+
+RUN -> executes during the build of image
+
+CMD --> executes only when the container is created out of image
+
+docker build <location of the file>
+
+docker build -t myimage:1.0 . (if present in the file location)  (-t is the tag -t imagename:tag)
+
+ Docker pulls the base image and create a container then the snapshot of the filesystem is taken and the container is deleted. (Intermediate containers)
+  
+ the created image is built into container and the RUN cmds are executed in the container built from the last image. the container is then deleted and a new image is created
+
+CMD command takes the image from the last step and build a new container and removes the container after the command is executed and builds the final image.
+
+If the dockerfile is built again. Docker uses the cache. But if the operations steps are changed in Dockerfile then the whole process goes again.
+
+
+CONTAINER PORT MAPPING:
+
+docker run -p 5000:8080 image id
+   
+5000: Routes incoming requests to the port on local hosts to 8080:the port inside the container            
+--------------------------------ENTRYPOINT VS CMD GOOGLE IT-----------------------------

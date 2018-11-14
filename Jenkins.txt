@@ -1,0 +1,10 @@
+find /usr/lib/jvm/java-1.8*   => this is for finding the path of java
+ select the one with /bin 
+ vi bash_profile
+JAVA_HOME= paste the path here
+ Insert the java variable
+ PATH=$PATH:$JAVA_HOME:$HOME/bin
+save and exit
+refresh the bash profile
+source ~/.bash_profile
+echo $JAVA_HOME ==> It shows the path of java

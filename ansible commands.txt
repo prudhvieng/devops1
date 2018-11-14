@@ -1,0 +1,52 @@
+1  rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+
+
+
+
+
+*****ansible -i /root/hostfile all -m shell -a "uptime"*******
+  
+-i is the inventory flag for the hostfile defined other than in /ansible/hosts
+ 
+-m is the module   -a is the attribute
+
+***Adhoc commands are for simple operations..eg:uptime,restart,poweroff,OSinfo****
+each command should be run manually
+
+    command hostgroups module/arguments [options]
+
+ansible webservers -a uptime
+ 
+ansible-doc -l |more   to know about modules
+
+ansible-doc user    
+
+ansible all -m user -a "name=blue password=blue"   ****WORK ON THIS******
+
+
+*********************************************
+
+ansible all -a "sudo yum -y install httpd"    to uninstall use remove
+ ---we can write the command giving the -a attribute
+
+**************************************************
+
+Using modules
+
+ansible all -m yum "name=httpd state=present"
+
+****ansible-playbook playbookname.yml --syntax-check*****
+
+-->to overwrite the inventory file for hostgroup 
+ansible-playbook -i /root/hostnew playbookname.yml
+  
+ansible-playbook playbookname.yml --list-hosts  --> To check the no of hosts effecteted by playbook.yml file
+
+
+*****etc/ansible/ansible.cfg*******************
+change the file to customize it  to overwrite the default values
+
+
+
+
