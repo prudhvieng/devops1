@@ -31,3 +31,84 @@ git fetch (downloads the diff)
 git branch -r
 git show origin/master
 git merge origin/master
+==============================================================================================================
+https://www.youtube.com/watch?v=ugUEIa6hr9g&list=PLH1ul2iNXl7vkfIFF2BxLA5xpkbvWtFWf&index=2
+
+HEAD= HEAD is the light weight pointer points to the recent commit in your branch.
+
+git checkout "previous commit id"  ==>Head points to previous commit id and the recent commit id ill be lost
+
+git checkout master  ==>HEAD gets back to the recent commit id in master
+
+git branch task  ==> To create a new branch task 
+
+git checkout task   ==> switches to task
+
+commit the file
+
+Head points to the task branch . Master branch is one commit behind.
+
+this commits cannot be seen in master branch. Unless we merge the branch
+ Get to the branch where the merge should be done and perform
+
+git merge task
+
+master will now have all commits
+======================================================================================================
+ Delete a branch
+  
+you cannot delete a branch by staying on the same branch
+
+git branch -d task 
+
+If the branch is not merged and still want to delete the branch
+
+git branch -D task
+
+=========================================================================================================
+PUSH BRANCH TO REMOTE
+
+git push origin branchname
+
+
+=========================================================================================================
+
+To Discard the changes after modification in working area
+ git checkout -- filename   (to discard a particular file)
+ git checkout .        (to discard all the files)
+
+=======================================================================================================
+
+Unstage
+
+git reset HEAD filename
+
+git reset HEAD .
+ 
+When we unstage a file those changes ae kept in working area
+
+=========================================================================================================
+
+Remove a commit locally   cannot reset a particular commit
+
+git reset HEAD~1  ==> removes the commit from the history
+
+use it locally only 
+
+SOFT RESET: the changes are kept in staging area
+
+HARD RESET: Removes the changes from index and working tree
+
+MIXED RESET== Default
+
+===============================================================================================================
+
+GIT REVERT: 
+
+to revert the changes remotely.
+It creates a new commit id discarding the changes. The old commit id will be saved.
+
+================================================================================================================
+
+
+
