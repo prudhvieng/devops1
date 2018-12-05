@@ -1,0 +1,97 @@
+Instatllation Jenkins begin
+---------------------
+First install java
+----------------------------------------------------------------
+apt-get install software-properties-common
+add-apt-repository ppa:webupd8team/java
+apt-get update
+apt-get install oracle-java8-installer
+java -version
+-----------------------------------------------------------------
+Java Path setup
+-----------------------------------------------------------------
+update-alternatives --config java
+cat>>/etc/environment
+JAVA_HOME="/your/java/installation-path"
+
+Run the command
+source /etc/environment
+Run the command
+echo $JAVA_HOME
+
+for eg the path like this /usr/lib/jvm/java-8-oracle
+cat>>/etc/environment
+JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+to save ctrl+d
+source /etc/environment
+echo $JAVA_HOME
+to get path like this --> /usr/lib/jvm/java-8-oracle
+
+*****************************jenkins*************************************
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+wget https://pkg.jenkins.io/debian-stable/binary/jenkins_2.138.1_all.deb
+sudo apt-get install jenkins
+
+service jenkins status
+service jenkins stop
+service jenkins start
+
+In aws change the security groups
+custom 8080 
+
+http://pulic address:8080
+
+copy the path in the given folder in site and paste in the site
+got to admin and change the password 
+
+java setup in jenkins
+manage jenkins --> configuration -->Global Tool Configuration
+JDK Installation
+java
+
+find / -name javac
+copy /usr/lib/jvm/java-8-oracle
+and paste
+--------------------------------------------------------- end --------------------------
+
+
+
+
+
+
+
+
+
+
+***********************************maven install ***************************
+mkdir /opt/maven
+cd /opt/maven
+wget http://mirrors.wuchna.com/apachemirror/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+apt-get install tar
+tar -xvzf apache-maven-3.5.4-bin.tar.gz
+apt-get install maven
+mvn -v
+********************************* tomcat****************************************
+mkdir /opt/tomcat
+cd /opt/tomcat
+wget http://mirrors.fibergrid.in/apache/tomcat/tomcat-8/v8.5.34/bin/apache-tomcat-8.5.34.tar.gz
+tar -xvzf apache-tomcat-8.5.34.tar.gz
+cd apache-tomcat-8.5.34
+ls
+cd bin
+./startup.sh
+ln -s /opt/tomcat/tomcat8/bin/startup.sh /usr/local/bin/up
+ln -s /opt/tomcat/tomcat8/bin/shutdown.sh /usr/local/bin/down
+*********************************************************************************
+
+###################################################Docker Installation######################################################
+1. check docker is present in ubuntu or not
+	#docker
+
+2. Docker instatllation in ubuntu server
+	snap install docker     # version 17.06.2-ce, or
+	apt  install docker.io
+
+3.

@@ -95,12 +95,18 @@ git reset HEAD~1  ==> removes the commit from the history
 
 use it locally only 
 
+git reset HEAD~2        # undo last two commits, keep changes
+git reset --hard HEAD~2 # undo last two commits, discard changes
+
 SOFT RESET: the changes are kept in staging area
 
 HARD RESET: Removes the changes from index and working tree
 
 MIXED RESET== Default
 
+==============================================================================================================
+
+https://www.atlassian.com/git/tutorials/merging-vs-rebasing
 ===============================================================================================================
 
 GIT REVERT: 

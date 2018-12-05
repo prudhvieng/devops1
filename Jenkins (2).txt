@@ -48,4 +48,19 @@ MANAGE JENKINS:  Configure Systems
 		GLOBAL TOOL CONFIGURATION: 
 			ALL tools like Git,Docker,Maven etc..paths are given here.
 MANAGE USER: Create user modify user delete user
+
+Master-Slave :  Take an instance and install java
+                Manage Jenkins ==> Manage Nodes ==> Create New node==> click Permanent agent
+
+               Remote root directory: Give the path where the jobs are to be build and data is stored 
+               Labels: give the label name so it can be called during building jobs. restrict where the project can be run
+               Select usage jobs build with the label expression matching jobs
+               Host: Give the slave ip adress
+               Add key: select ssh username with private key
+               username: ec2-user
+               click enter directly and paste the pem key 
+               HostKey Verification: select non verifying verification strategy
+               save and exit
+               create a job in master and select restrict where this project can be run and select the label
+               build the job.
 		  
