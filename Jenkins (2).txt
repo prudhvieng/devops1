@@ -63,4 +63,9 @@ Master-Slave :  Take an instance and install java
                save and exit
                create a job in master and select restrict where this project can be run and select the label
                build the job.
+
+
+Parallel Builds: When a regression test is running and a smoke test is needed to be performed then the parallel builds come to rescue
+
+Select concurrent jobs if necessary
 		  
