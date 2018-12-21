@@ -1,0 +1,50 @@
+vpc
+https://www.youtube.com/watch?v=NHozohphtEg
+
+ec2 windows 2 and load balancing
+https://www.youtube.com/watch?v=CoN1nZOd9Bo
+
+
+linux and putty
+https://www.youtube.com/watch?v=bi7ow5NGC-U
+
+s3 buckets
+https://www.youtube.com/watch?v=VRUzevLibzQ
+
+
+glacier
+https://www.youtube.com/watch?v=G-FjyXvMuYo
+
+
+IAM
+https://www.youtube.com/watch?v=3123eqX6yaU
+
+
+aws cli
+www.youtube.com/watch?v=_f0d2pLJjiA
+
+cloudwatch
+https://www.youtube.com/watch?v=ekHzOPzR1wA
+
+aws aurora rds 
+https://www.youtube.com/watch?v=BkzWDEU1dsI
+
+aws Dynamodb
+https://www.youtube.com/watch?v=GfUnnym1n1Y
+
+
+
+
+
+
+
+
+linux
+
+
+https://www.youtube.com/watch?v=v_1zB2WNN14
+
+
+key pair 1
+
+https://www.youtube.com/watch?v=5btWXn4yWzQ
